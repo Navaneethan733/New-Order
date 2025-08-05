@@ -99,8 +99,8 @@ body, html {
   color: #ffe0e0;
 }
 .hero {
-  padding-top: 80px; 
-  height: 100vh;
+  padding-top: 0px; 
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,9 +112,13 @@ body, html {
   background-repeat: no-repeat;
 }
 
+.hero-content{
+  transform: translateY(-5rem)
+}
 .hero-content h1 {
   font-size: 3rem;
   animation: slideInUp 1s ease;
+  
 }
 .hero-content p {
   margin-top: 1rem;
@@ -126,7 +130,7 @@ body, html {
   display: flex;
   align-items:center;
   justify-content: center;
-  transform: translateY(-11rem)
+  transform: translateY(-19rem)
 }
 
 .icon-button {
@@ -152,7 +156,10 @@ body, html {
   color: aliceblue;
   transform: scale(1.05);
 }
-.delivery{
+.delivery,
+.takeaway {
+  display: flex;
+  flex-direction: column;
   height: 150px;
   width: 285px;
   gap: 10px;
@@ -161,23 +168,16 @@ body, html {
   justify-content: center;
   padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: #6e6e6e;
+  box-shadow: 0 2px 8px #6e6e6e;
+  transform: translateY(-19rem)
 }
 
-.delivery p{
-  justify-content: space-between;
-  align-items: center;
-  
-}
-.takeaway{
-  height: 150px;
-  width: 285px;
-  gap: 10px;
-  background-color: #f0f0ee;
+.center-screen {
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
-  border-radius: 8px;
+  gap: 30px; 
+  margin-top: 2rem;
 }
 .specials {
   text-align: center;
