@@ -272,7 +272,6 @@ body, html {
   to { opacity: 1; }
 }
 
-/* MEDIA QUERIES */
 @media (max-width: 1024px) {
   .delivery,
   .takeaway {
@@ -374,7 +373,6 @@ body, html {
     padding: 20px 10px;
   }
 }
-/* Mobile view below 600px */
 @media (max-width: 600px) {
   .nav-links {
     display: none;
