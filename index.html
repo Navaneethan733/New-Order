@@ -6,24 +6,28 @@
   <title>Indian Food Express</title>
   <link rel="stylesheet" href="style.css"/>
   <script defer src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <header class="hero">
-    <nav class="navbar">
-      <div class="logo">IndianFlavors</div>
-      <ul class="nav-links">
-     <li><a href="#">Home</a></li>
-     <li><a href="#menu">Menu</a></li> 
-     <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#signin">SignIN</a></li>
-</ul>
-</nav>
+   <nav class="navbar">
+  <div class="logo">IndianFlavors</div>
 
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#">SingIN</a></li>
+  </ul>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
 
 <div class="hero-content">
       <h1>Spice Up Your Cravings</h1>
@@ -67,7 +71,6 @@
   </div>
 </div>
 <footer class="footer" id="contact">
-  <div class="footer-container">
     
     <div class="footer-section about">
       <h3>IndianFlavors</h3>
@@ -89,13 +92,13 @@
         <a href="#"><img src="./Icons/twitter logo.png" alt="Twitter"></a>
         <a href="#"><img src="./Icons/youtube logo.png" alt="YouTube"></a>
       </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
+   </div>
+   <div class="footer-bottom">
     <p>&copy; 2025 IndianFlavors. All rights reserved.</p>
   </div>
-</footer>
+  </footer>
 
 <a href="#" class="floating-order-btn">Order Now 🍽️</a>
+
 </body>
 </html>

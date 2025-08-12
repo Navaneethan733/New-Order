@@ -51,10 +51,15 @@
         }
       });
 
-      // Prevent hiding when clicking inside the boxes
+     
       if (centerScreen) {
         centerScreen.addEventListener('click', function(e) {
           e.stopPropagation();
         });
       }
     });
+
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+

@@ -6,9 +6,11 @@
 body, html {
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
-  background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 0, 153)) ;
+  background: url(./6907193.jpg);
   color: #3f3030;
+  overflow-x: hidden;
 }
+
 .navbar {
   position: fixed;          
   top: 0;
@@ -34,6 +36,24 @@ body, html {
   gap: 1.5rem;
   list-style: none;
 }
+
+.hamburger {
+  display: none;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+.hamburger:hover {
+  color: #f80a0a;
+}
 .nav-links li a {
   text-decoration: none;
   color: rgb(248, 245, 245);
@@ -43,9 +63,10 @@ body, html {
 .nav-links li a:hover {
   color: #f80a0a;
 }
+
 .hero {
   padding-top: 0px; 
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,7 +84,6 @@ body, html {
 .hero-content h1 {
   font-size: 3rem;
   animation: slideInUp 1s ease;
-  
 }
 .hero-content p {
   margin-top: 1rem;
@@ -92,7 +112,6 @@ body, html {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .icon-button img {
   vertical-align: top;
 }
@@ -101,6 +120,7 @@ body, html {
   color: aliceblue;
   transform: scale(1.05);
 }
+
 .delivery,
 .takeaway {
   display: flex;
@@ -119,8 +139,6 @@ body, html {
   animation: popIn 0.7s cubic-bezier(.25,.8,.25,1);
   transform: translateY(-20rem);
 }
-
-
 .delivery:hover,
 .takeaway:hover {
   transform: translateY(-8px) scale(1.04);
@@ -136,7 +154,6 @@ body, html {
   gap: 30px; 
   margin-top: 2rem;
 }
-
 
 .sentence{
   display: flex;
@@ -160,9 +177,7 @@ body, html {
   height: 350px;
   width: 600px;
   border-radius: 19px;
-  box-shadow: 
-    3px 3px 5px rgba(0, 0, 0, 0.3), 
-    -3px -3px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), -3px -3px 5px rgba(255, 255, 255, 0.5);
 }
 .poster img:hover {
   box-shadow: 0 8px 16px rgba(255, 0, 153, 0.6);
@@ -177,6 +192,7 @@ body, html {
 }
 
 .footer-container {
+  background-color: #050505;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -222,6 +238,7 @@ body, html {
   border-top: 1px solid #444;
   margin-top: 20px;
 }
+
 .floating-order-btn {
   position: fixed;
   bottom: 20px;
@@ -241,7 +258,7 @@ body, html {
   transform: scale(1.05);
 }
 
-
+/* Animations */
 @keyframes slideInLeft {
   from { transform: translateX(-100px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
@@ -255,12 +272,8 @@ body, html {
   to { opacity: 1; }
 }
 
-/* Existing CSS remains the same until media queries */
-
+/* MEDIA QUERIES */
 @media (max-width: 1024px) {
-  /* Previous 1024px styles remain the same */
-  
-  /* Adjust delivery/takeaway boxes for tablets */
   .delivery,
   .takeaway {
     width: 280px;
@@ -268,83 +281,118 @@ body, html {
     padding: 18px 24px;
     transform: translateY(-18rem);
   }
-  
-  .center-screen {
-    gap: 20px;
+  .banner .poster img{
+    height: 310px;
+    width: 490px;
+  }
+  .banner{
+    transform: translateY(-15rem);
   }
 }
 
 @media (max-width: 768px) {
-  /* Previous 768px styles remain the same */
-  
-  /* Stack delivery/takeaway boxes vertically on mobile */
   .center-screen {
     flex-direction: column;
     gap: 15px;
+    transform: translateY(-5rem);
   }
-  
   .delivery,
   .takeaway {
     width: 90%;
     max-width: 320px;
     transform: translateY(-15rem);
   }
-  
-  .button-wrap {
-    transform: translateY(-12rem);
+  .banner .poster img{
+    height: 200px;
+    width: 300px;
   }
-  
-  /* Adjust hover effects for touch devices */
-  .delivery:hover,
-  .takeaway:hover {
-    transform: translateY(-15rem) scale(1.02);
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
 }
 
-@media (max-width: 480px) {
-  /* Previous 480px styles remain the same */
-  
-  /* Further adjustments for small mobile devices */
+@media (max-width: 425px) {
+  .hero-content h1 {
+    font-size: 29px;
+  }
+  .hero-content p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
   .delivery,
   .takeaway {
     height: auto;
     min-height: 150px;
     padding: 15px 20px;
-    transform: translateY(-10rem);
+    transform: translateY(-2rem);
   }
-  
+  .banner {
+    flex-direction: column;
+    transform: translateY(-4.5rem);
+  }
+  .banner .poster img{
+    height: 150px;
+    width: 250px;
+  }
   .button-wrap {
     transform: translateY(-8rem);
   }
-  
-  /* Make address input more touch-friendly */
-  input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
+  .social-icons {
+    justify-content: center;
   }
-  
-  /* Adjust location link */
-  .delivery a, 
-  .takeaway a {
-    font-size: 14px;
+  .footer-bottom {
+    font-size: 12px;
   }
 }
 
-/* Add this for very small screens (e.g., iPhone SE) */
 @media (max-width: 375px) {
   .delivery h4,
   .takeaway h4 {
     font-size: 16px;
   }
-  
+  .button-wrap {
+    transform: translateY(-10rem);
+  }
+  .banner{
+    transform: translateY(-7rem);
+  }
   .delivery p,
   .takeaway p {
     font-size: 13px;
   }
-  
   .icon-button {
     padding: 10px 15px;
     font-size: 14px;
+  }
+  .sentence{
+    transform: translateY(-11rem);
+  }
+  .footer {
+    padding: 20px 10px;
+  }
+}
+/* Mobile view below 600px */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #050505;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
