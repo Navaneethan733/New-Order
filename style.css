@@ -6,10 +6,28 @@
 body, html {
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
-  background: url(./6907193.jpg);
+  background: 
+    linear-gradient(270deg, #f77b33, #fd6666, #c17bfa, #fd866b),
+    url(./6907193.jpg) center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-size: 400% 400%, cover; /* First layer is big for animation */
   color: #3f3030;
   overflow-x: hidden;
+  animation: gradientMove 15s ease infinite;
 }
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%, center;
+  }
+  50% {
+    background-position: 100% 50%, center;
+  }
+  100% {
+    background-position: 0% 50%, center;
+  }
+}
+
 
 .navbar {
   position: fixed;          
@@ -84,12 +102,26 @@ body, html {
 .hero-content h1 {
   font-size: 3rem;
   animation: slideInUp 1s ease;
+  color: #ffcc00; /* Base text color */
+  text-shadow: 0 0 5px #0a0800,
+               0 0 10px #ff9900,
+               0 0 20px #ff6600,
+               0 0 40px #ff3300;
 }
+
 .hero-content p {
   margin-top: 1rem;
   font-size: 1.2rem;
   opacity: 0.9;
+  color: #000000; /* Light cream text */
+  text-shadow: 0 0 5px #fff8dc,
+               0 0 10px #ffe4b5,
+               0 0 15px #ffd27f;
+               /* padding: 10px;
+               background-color: #f5f0f0;
+               border-radius: 7px; */
 }
+
 
 .button-wrap{
   display: flex;
@@ -182,6 +214,25 @@ body, html {
 .poster img:hover {
   box-shadow: 0 8px 16px rgba(255, 0, 153, 0.6);
   transform: translateY(-2px);
+}
+
+.viewAll-deal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: translateY(-13rem);
+}
+
+.viewAll-deal h1{
+    background: linear-gradient(to bottom, black, rgb(238, 222, 222) 50%);
+    background-clip: text;
+    color: transparent;
+    
+    
+}
+.viewAll-deal a{
+    text-decoration: none;
 }
 
 .footer {
@@ -328,6 +379,9 @@ body, html {
     padding: 15px 20px;
     transform: translateY(-2rem);
   }
+  .sentence{
+    transform: translateY(-6rem);
+  }
   .banner {
     flex-direction: column;
     transform: translateY(-4.5rem);
@@ -367,7 +421,8 @@ body, html {
     font-size: 14px;
   }
   .sentence{
-    transform: translateY(-11rem);
+    transform: translateY(-7rem);
+    padding-bottom: 1rem;
   }
   .footer {
     padding: 20px 10px;
