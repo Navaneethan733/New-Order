@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+      <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffffff, #000000);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;          
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: #000000;
+            color: rgb(255, 255, 255);
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: rgb(255, 255, 255);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #020000;
+        }
+
+        /* Chef Section */
+        .chef-section {
+            margin-top: 6rem;
+            padding: 3rem 10%;
+            text-align: center;
+        }
+
+        .chef-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+             transform: translateY(2rem);
+        }
+
+        .chef-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            width: 220px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .chef-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chef-card img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .chef-card h4 {
+            color: #696867;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #c4c3c1;
+            padding: 4rem 10%;
+            text-align: center;
+        }
+
+        .testimonial-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+             transform: translateY(2rem);
+        }
+
+        .testimonial-card {
+            background:linear-gradient(to right, #ffffff, #000000);
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-style: italic;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+.footer {
+  background-color: #080808;
+  color: #525151;
+  padding: 40px 20px 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  background-color: #050505;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3, .footer-section h4 {
+  color: #616160;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 13px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+.floating-order-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 999;
+  transition: background 0.3s, transform 0.3s;
+}
+.floating-order-btn:hover {
+  background: #000000;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="./index.html">Stackly</a>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#contact1">Contact</a></li>
+            <li><a href="./signup.html">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Chef Section -->
+    <section class="chef-section">
+        <h3>Meet Our Chefs</h3>
+        <div class="chef-list">
+            <div class="chef-card"data-aos="fade-up" data-aos-delay="30">
+                <img src="./female-chef-14984977.webp" alt="Chef Arjun Mehra">
+                <h4>Chef Arjun Mehra</h4>
+                <p>Specialist in Tandoori & Mughlai Cuisine</p>
+            </div>
+            <div class="chef-card"data-aos="fade-up" data-aos-delay="30">
+                <img src="./Gordon_Ramsay.jpg.webp" alt="Gordon Ramsay">
+                <h4>Gordon Ramsay</h4>
+                <p>Expert in South Indian Flavors</p>
+            </div>
+            <div class="chef-card"data-aos="fade-up" data-aos-delay="30">
+                <img src="./Pros_and_Cons_of_Being_a_Chef.webp" alt="Chef Vikram Sharma">
+                <h4>Chef Vikram Sharma</h4>
+                <p>Fusion Cuisine Innovator</p>
+            </div>
+            <div class="chef-card" data-aos="fade-up" data-aos-delay="30">
+                <img src="./1947350-chef-rahul-wali-image-1.webp" alt="Chef Kapoor">
+                <h4>Chef Kapoor</h4>
+                <p>Pastry & Dessert Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h3>What Our Customers Say</h3>
+        <div class="testimonial-list">
+            <div class="testimonial-card" data-aos="fade-left" data-aos-delay="90">
+                <p>"Absolutely loved the Tandoori Chicken! Fresh, juicy, and perfectly spiced. Will order again!"</p>
+                <h4>— Rahul Verma</h4>
+            </div>
+            <div class="testimonial-card"data-aos="fade-up" data-aos-delay="90">
+                <p>"Stackly never disappoints. Fast delivery and the butter naan is heavenly!"</p>
+                <h4>— Ananya Sharma</h4>
+            </div>
+            <div class="testimonial-card"data-aos="fade-right" data-aos-delay="90">
+                <p>"Tried their South Indian platter, and it felt like a trip to Kerala. Highly recommend!"</p>
+                <h4>— Vivek Iyer</h4>
+            </div>
+        </div>
+    </section>
+     <div class="footer-section about">
+      <h3>Stackly</h3>
+      <p>Experience the taste of authentic Indian cuisine, served with love and excellence.</p>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact Us</h4>
+      <p><strong>Address:</strong> 123 Spice Street, Food City, India</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+      <p><strong>Email:</strong> Stackly@gmail.com</p>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="./Icons/facebook logo.png" alt="Facebook"></a>
+        <a href="#"><img src="./Icons/instagram logo.png" alt="Instagram"></a>
+        <a href="#"><img src="./Icons/twitter logo.png" alt="Twitter"></a>
+        <a href="#"><img src="./Icons/youtube logo.png" alt="YouTube"></a>
+      </div>
+   </div>
+   <div class="footer-bottom">
+    <p>&copy; 2025 Stackly. All rights reserved.</p>
+  </div>
+  </footer>
+
+<a href="#" class="floating-order-btn">Order Now 🍽️</a>
+</body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true  
+  });
+</script>
+</html>
