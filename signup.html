@@ -13,7 +13,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #ff4d4d, #ff9900);
+  background: linear-gradient(to right, #fdfcfc, #020201);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -24,13 +24,14 @@ body {
   position: fixed;          
   top: 0;
   left: 0;
+  /* margin-bottom: 90px; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #FFF0C4;
-  color: rgb(82, 80, 80);
+  background: #000000;
+  color: rgb(255, 255, 255);
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -40,7 +41,7 @@ body {
   font-weight: bold;
   animation: slideInLeft 1s ease;
   cursor: pointer;
-  background:rgb(110, 110, 110);
+  background:rgb(255, 255, 255);
     background-clip: text;
     color: transparent;
   text-decoration: none;
@@ -70,7 +71,7 @@ body {
 }
 .nav-links li a {
   text-decoration: none;
-  color: rgb(75, 73, 73);
+  color: rgb(255, 255, 255);
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -82,10 +83,11 @@ body {
   background: white;
   padding: 2rem;
   border-radius: 15px;
+  margin-top: 70px;
   width: 350px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.8s ease-in-out;
-  transform: translateY(2rem);
+  animation: fadeIn .8s ease-in-out;
+  
 }
 
 .signup-container h1 {
@@ -125,7 +127,7 @@ input:focus {
 }
 
 .btn {
-  background: linear-gradient(to right, #ff4d4d, #ff9900);
+  background: linear-gradient(to right, #ffffff, #070400);
   color: white;
   padding: 0.7rem;
   border: none;
@@ -147,7 +149,7 @@ input:focus {
 }
 
 .login-link a {
-  color: #ff6600;
+  color: #ff0000;
   text-decoration: none;
 }
 
@@ -166,6 +168,7 @@ input:focus {
 <a class="logo" href="./index.html">Stackly</a>
 
   <ul class="nav-links">
+    
     <li><a href="./page2.html">Home</a></li>
     <li><a href="#">Menu</a></li>
     <li><a href="./about.html">About</a></li>
@@ -173,7 +176,7 @@ input:focus {
   </ul>
 
   <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
+    <span></span>  
     <span></span>
     <span></span>
   </div>

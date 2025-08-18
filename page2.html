@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stackly</title>
+      <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         *{
             padding: 0;
@@ -13,7 +14,7 @@
         }
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #ff4d4d, #ff9900);
+            background: linear-gradient(to right, #ffffff, #000000);
             overflow-x: hidden;
         }
 
@@ -26,8 +27,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background: #FFF0C4;
-            color: rgb(82, 80, 80);
+            background: #000000;
+            color: rgb(255, 255, 255);
             z-index: 1000;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
@@ -35,7 +36,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: rgb(110, 110, 110);
+            background: rgb(255, 255, 255);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -51,7 +52,7 @@
 
         .nav-links li a {
             text-decoration: none;
-            color: rgb(75, 73, 73);
+            color: rgb(255, 255, 255);
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -72,6 +73,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
+             transform: translateY(2rem);
         }
 
         .chef-card {
@@ -94,7 +96,7 @@
         }
 
         .chef-card h4 {
-            color: #ff6600;
+            color: #696867;
         }
 
         /* Testimonials */
@@ -109,10 +111,11 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
+             transform: translateY(2rem);
         }
 
         .testimonial-card {
-            background: white;
+            background:linear-gradient(to right, #ffffff, #000000);
             padding: 1.5rem;
             border-radius: 10px;
             width: 300px;
@@ -182,8 +185,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #FFF0C4;
-  color: rgb(5, 4, 4);
+  background: #000000;
+  color: rgb(255, 255, 255);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-weight: bold;
@@ -193,7 +196,7 @@
   transition: background 0.3s, transform 0.3s;
 }
 .floating-order-btn:hover {
-  background: #fdfdfd;
+  background: #000000;
   transform: scale(1.05);
 }
 
@@ -216,7 +219,7 @@
     <nav class="navbar">
         <a class="logo" href="./index.html">Stackly</a>
         <ul class="nav-links">
-            <li><a href="./page2.html">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="#contact1">Contact</a></li>
@@ -228,24 +231,24 @@
     <section class="chef-section">
         <h3>Meet Our Chefs</h3>
         <div class="chef-list">
-            <div class="chef-card">
-                <img src="https://source.unsplash.com/150x150/?chef,indian" alt="Chef Arjun Mehra">
+            <div class="chef-card"data-aos="fade-up" data-aos-delay="30">
+                <img src="./female-chef-14984977.webp" alt="Chef Arjun Mehra">
                 <h4>Chef Arjun Mehra</h4>
                 <p>Specialist in Tandoori & Mughlai Cuisine</p>
             </div>
-            <div class="chef-card">
-                <img src="https://source.unsplash.com/150x150/?chef,kitchen" alt="Chef Priya Nair">
-                <h4>Chef Priya Nair</h4>
+            <div class="chef-card"data-aos="fade-up" data-aos-delay="30">
+                <img src="./Gordon_Ramsay.jpg.webp" alt="Gordon Ramsay">
+                <h4>Gordon Ramsay</h4>
                 <p>Expert in South Indian Flavors</p>
             </div>
-            <div class="chef-card">
-                <img src="https://source.unsplash.com/150x150/?chef,cooking" alt="Chef Vikram Sharma">
+            <div class="chef-card"data-aos="fade-up" data-aos-delay="30">
+                <img src="./Pros_and_Cons_of_Being_a_Chef.webp" alt="Chef Vikram Sharma">
                 <h4>Chef Vikram Sharma</h4>
                 <p>Fusion Cuisine Innovator</p>
             </div>
-            <div class="chef-card">
-                <img src="https://source.unsplash.com/150x150/?chef,cooking" alt="Chef Neha Kapoor">
-                <h4>Chef Neha Kapoor</h4>
+            <div class="chef-card" data-aos="fade-up" data-aos-delay="30">
+                <img src="./1947350-chef-rahul-wali-image-1.webp" alt="Chef Kapoor">
+                <h4>Chef Kapoor</h4>
                 <p>Pastry & Dessert Specialist</p>
             </div>
         </div>
@@ -255,15 +258,15 @@
     <section class="testimonials" id="testimonials">
         <h3>What Our Customers Say</h3>
         <div class="testimonial-list">
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-left" data-aos-delay="90">
                 <p>"Absolutely loved the Tandoori Chicken! Fresh, juicy, and perfectly spiced. Will order again!"</p>
                 <h4>— Rahul Verma</h4>
             </div>
-            <div class="testimonial-card">
+            <div class="testimonial-card"data-aos="fade-up" data-aos-delay="90">
                 <p>"Stackly never disappoints. Fast delivery and the butter naan is heavenly!"</p>
                 <h4>— Ananya Sharma</h4>
             </div>
-            <div class="testimonial-card">
+            <div class="testimonial-card"data-aos="fade-right" data-aos-delay="90">
                 <p>"Tried their South Indian platter, and it felt like a trip to Kerala. Highly recommend!"</p>
                 <h4>— Vivek Iyer</h4>
             </div>
@@ -297,4 +300,11 @@
 
 <a href="#" class="floating-order-btn">Order Now 🍽️</a>
 </body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true  
+  });
+</script>
 </html>

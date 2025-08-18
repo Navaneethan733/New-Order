@@ -18,7 +18,7 @@
         if (overlay) overlay.style.display = 'none';
       }
 
-      // Add event listeners
+      // Add event listeners 
       if (deliveryBtn && deliveryBox) {
         deliveryBtn.addEventListener('click', function(e) {
           e.stopPropagation();
